@@ -1,0 +1,104 @@
+/**
+ * Font sizes and text margins
+ *
+ * Set the font sizes and text margins of your text.
+ * Please not, that font sizes should not be defined outside this section.
+ */
+
+// Define the Margins
+p, h1, h2, h3, h4, h5, h6, ul, ol, dl, dd, dt, blockquote, address, table, pre, .accordion-title {
+	margin-bottom: @line-height-target-xs;
+}
+
+// Define the font sizes
+body {
+	.verticalRhythm(0);
+}
+
+h1 {
+	.verticalRhythm(3);
+	margin-bottom: @line-height-target-xs * 1;
+	padding-bottom: @line-height-target-xs * 1 - 3px;
+}
+
+h2 {
+	.verticalRhythm(2);
+	margin-bottom: @line-height-target-xs * 1;
+
+	&.section {
+		padding-bottom: @line-height-target-xs;
+	}
+
+}
+
+h3 {
+	.verticalRhythm(1);
+	margin-bottom: @line-height-target-xs * 1;
+}
+
+h4, h5, h6 {
+	.verticalRhythm(0);
+}
+
+kbd, code {
+	line-height: @base-line-height-xs;
+}
+
+blockquote {
+	.verticalRhythm(0);
+
+	padding-top: @line-height-target-xs * 0.5;
+	padding-bottom: @line-height-target-xs * 0.5;
+}
+
+// Font Sizes on tablets and above
+@media (min-width: @screen-sm-min) {
+
+	p, h1, h2, h3, h4, h5, h6, ul, ol, dl, dd, dt, blockquote, address, table, pre, .accordion-title {
+		margin-bottom: @line-height-target-sm;
+	}
+
+	body {
+		.verticalRhythm(0, "sm");
+	}
+
+	h1 {
+		.verticalRhythm(4, "sm");
+		margin-bottom: @line-height-target-sm * 1;
+		padding-bottom: @line-height-target-sm * 1 - 3px;
+	}
+
+	h2 {
+		.verticalRhythm(3, "sm");
+
+		&.section {
+			padding-bottom: @line-height-target-sm;
+		}
+
+	}
+
+	h3 {
+		.verticalRhythm(2, "sm");
+	}
+
+	h4 {
+		.verticalRhythm(1, "sm");
+	}
+
+	h5, h6 {
+		.verticalRhythm(0, "sm");
+	}
+
+	kbd, code {
+		line-height: @base-line-height-sm;
+	}
+
+	blockquote {
+		.verticalRhythm(-1, "sm");
+
+		padding-top: @line-height-target-sm * 0.5;
+		padding-bottom: @line-height-target-sm * 0.5;
+	}
+
+
+}

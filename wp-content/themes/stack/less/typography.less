@@ -1,0 +1,214 @@
+/**
+ * Typography
+ *
+ * Set the look and feel of the base typography.
+ * Important: No font sizes shall be defined here!
+ */
+
+body {
+	font-family: @font-family-sans-serif;
+	line-height: 1;
+	font-weight: 400;
+}
+
+p {
+	margin: 0;
+}
+
+strong {
+	font-weight: 600;
+}
+
+a {
+	color: inherit;
+	text-decoration: underline;
+	position: relative;
+
+	font-weight: 700;
+
+	&:before {
+		opacity: 1;
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 50%;
+		right: 50%;
+		bottom: 0;
+		border-top: 1px solid;
+		transition: all .125s ease;
+	}
+
+	&:hover {
+		&:before {
+			left: 0;
+			right: 0;
+		}
+
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: normal;
+	font-size: 1em;
+	margin: 0;
+	padding: 0;
+	word-wrap:break-word;
+	text-align: left;
+	font-family: @font-family-headlines;
+}
+
+h1 {
+	word-wrap:break-word;
+	clear: both;
+	font-weight: 700;
+	.clearfix();
+}
+
+h2 {
+	clear: both;
+	font-weight: 700;
+	.clearfix();
+}
+
+h3 {
+}
+
+h4 {
+
+}
+
+ul, ol {
+	padding: 0;
+	list-style-position: outside;
+
+	li {
+		margin: 0 0 0 15px;
+	}
+
+	ul, ol {
+		margin-bottom: 0;
+	}
+}
+
+dl {
+	font-size: 1em;
+    margin-top: 0;
+}
+
+dt, dd {
+}
+
+dt {
+    font-weight: 700;
+}
+
+dd {
+    margin-left: 0;
+}
+
+code {
+  padding: .1em 4px;
+  font-size: .8em;
+  border-radius: 4px;
+}
+
+kbd {
+	padding: .1em 4px;
+	font-size: .8em;
+	border-radius: 4px;
+}
+
+big {
+	font-size: inherit;
+}
+
+pre {
+	overflow: auto;
+	margin: 0;
+	padding: 0;
+}
+
+blockquote {
+	margin: 0;
+	font-family: @font-family-headlines;
+
+	font-weight: 300;
+
+	p:last-child {
+		margin-bottom: 0;
+	}
+
+	border-left: 3px solid;
+	padding-left: 15px;
+}
+
+sup, sub {
+	line-height: 1;
+}
+
+table {
+	width: 100%;
+    border-collapse: collapse;
+
+	thead {
+
+		tr {
+			background-color: rgba(0,0,0,0.1);
+
+			th {
+				text-transform: uppercase;
+			}
+		}
+	}
+
+	tbody {
+
+		tr:nth-child(odd) {
+			background-color: transparent;
+		}
+
+		tr:nth-child(even) {
+			background-color: rgba(68, 130, 196, 0.05);
+		}
+	}
+
+	th, td, {
+		padding: 0 5px;
+		margin: 0;
+	}
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar. */
+}
