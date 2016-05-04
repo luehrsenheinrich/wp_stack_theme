@@ -7,8 +7,6 @@
 
 body {
 	font-family: @font-family-sans-serif;
-	line-height: 1;
-	font-weight: 400;
 }
 
 p {
@@ -16,35 +14,20 @@ p {
 }
 
 strong {
-	font-weight: 600;
+	font-weight: 700;
 }
 
 a {
 	color: inherit;
 	text-decoration: underline;
 	position: relative;
-
 	font-weight: 700;
 
-	&:before {
-		opacity: 1;
-		content: "";
-		display: block;
-		position: absolute;
-		top: 0;
-		left: 50%;
-		right: 50%;
-		bottom: 0;
-		border-top: 1px solid;
-		transition: all .125s ease;
-	}
-
 	&:hover {
-		&:before {
-			left: 0;
-			right: 0;
-		}
-
+		color: @brandColor;
+	}
+	&:visited {
+		color: darken(@brandAccent,10%);
 	}
 }
 
@@ -54,8 +37,6 @@ h3,
 h4,
 h5,
 h6 {
-	font-weight: normal;
-	font-size: 1em;
 	margin: 0;
 	padding: 0;
 	word-wrap:break-word;
