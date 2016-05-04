@@ -11,7 +11,7 @@
 # Themes
 !/wp-content/themes
 /wp-content/themes/*
-!/wp-content/themes/stack
+!/wp-content/themes/lh_stack
 
 # Plugins
 !/wp-content/plugins/
