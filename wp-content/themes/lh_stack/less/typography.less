@@ -7,10 +7,12 @@
 
 body {
 	font-family: @font-family-sans-serif;
+	font-weight: 200;
 }
 
 p {
 	margin: 0;
+	text-align: justify;
 }
 
 strong {
@@ -18,13 +20,13 @@ strong {
 }
 
 a {
-	color: inherit;
-	text-decoration: underline;
+	color: @brandColor;
+	text-decoration: none;
 	position: relative;
 	font-weight: 700;
-
+	
 	&:hover {
-		color: @brandColor;
+		color: @brandAccent;
 	}
 	&:visited {
 		color: darken(@brandAccent,10%);
@@ -42,18 +44,18 @@ h6 {
 	word-wrap:break-word;
 	text-align: left;
 	font-family: @font-family-headlines;
+	color: @brandColor;
+	font-weight: 700;
 }
 
 h1 {
 	word-wrap:break-word;
 	clear: both;
-	font-weight: 700;
 	.clearfix();
 }
 
 h2 {
 	clear: both;
-	font-weight: 700;
 	.clearfix();
 }
 
@@ -70,6 +72,7 @@ ul, ol {
 
 	li {
 		margin: 0 0 0 15px;
+		text-align: justify;
 	}
 
 	ul, ol {
