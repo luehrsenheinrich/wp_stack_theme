@@ -15,19 +15,19 @@
 
 </head>
 <body <?php body_class(); ?>>
-	
-	<header id="site-header" role="banner">
-		<div class="container">
-			<div class="row">
-				<div class="logo-wrapper col-xs-12">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo get_bloginfo("name"); ?>" alt="<?php echo get_bloginfo("name"); ?>" class="logo">
-						<img src="<?php echo WP_THEME_URL; ?>/img/gamedev_stack_logo.png" title="<?php echo get_bloginfo("name"); ?>" alt="<?php echo get_bloginfo("name"); ?>">
-					</a>
-					<div class="blog-desc">
-						<?php echo get_bloginfo('description'); ?>
+	<div class="viewport">
+		<header id="site-header" role="banner">
+			<div class="container">
+				<div class="row">
+					<div class="logo-wrapper col-xs-12">
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo get_bloginfo("name"); ?>" alt="<?php echo get_bloginfo("name"); ?>" class="logo">
+							<img src="<?php echo WP_THEME_URL; ?>/img/gamedev_stack_logo.png" title="<?php echo get_bloginfo("name"); ?>" alt="<?php echo get_bloginfo("name"); ?>">
+						</a>
+						<div class="blog-desc">
+							<?php echo get_bloginfo('description'); ?>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</header>
-	<div class="page-wrapper">
+		</header>
+		<div class="page-wrapper">

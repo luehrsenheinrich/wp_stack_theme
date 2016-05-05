@@ -1,0 +1,47 @@
+footer {
+	padding: @line-height-target-xs 0;
+	background-color: @gray3;
+	
+	.footer-menu,
+	.footer-logo {
+		text-align: center;
+	}
+	.footer-menu {
+		margin-bottom: @line-height-target-xs;
+		
+		ul.menu {
+			padding: 0 0 @line-height-target-xs 0;
+			margin: 0;
+			border-bottom: 2px dotted darken(@gray2,30%);
+			
+			li.menu-item {
+				list-style-type: none;
+				display: inline-block;
+				padding: 0 @line-height-target-xs;
+				.verticalRhythm(-1);
+				a {
+					color: @brandAccent;
+					text-decoration: none;
+					&:hover {
+						color: @brandColor;
+					}
+				}
+			}
+		}
+	}
+	.footer-logo {
+		p {
+			color: @gray2;
+			margin-bottom: @line-height-target-xs/2;
+			.verticalRhythm(-1);
+		}
+		img {
+			max-height: 40px;
+			width: auto;
+			opacity: 0.5;
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+}

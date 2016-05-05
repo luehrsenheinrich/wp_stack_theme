@@ -12,7 +12,7 @@ if(!defined('WP_JS_URL')) {
 }
 
 if(!defined('LANG_NAMESPACE')){
-	define( 'LANG_NAMESPACE', "lh");
+	define( 'LANG_NAMESPACE', "gds");
 }
 
 
@@ -53,6 +53,27 @@ add_action("wp_enqueue_scripts", "lh_enqueue_scripts");
  * @return void
  */
 function lh_load_theme_textdomain(){
-    load_theme_textdomain(LANG_NAMESPACE, get_template_directory() . '/lang');
+    load_theme_textdomain("gds", get_template_directory() . '/lang');
 }
 add_action('after_setup_theme', 'lh_load_theme_textdomain');
+
+function lh_theme_image(){
+	add_theme_support( 'post-thumbnails' );
+	set_post_thumbnail_size( 1920, 1080, true );
+
+}
+add_action("init", "lh_theme_image");
+
+/**
+ * lh_register_menus function.
+ *
+ * @access public
+ * @return void
+ */
+function lh_register_menus(){
+	register_nav_menus( array(
+		'main menu' 	=> __("Main Menu", "gds"),
+		'footer-menu' 	=> __("Footer Menu", "gds"),
+	) );
+}
+add_action('init', 'lh_register_menus');
