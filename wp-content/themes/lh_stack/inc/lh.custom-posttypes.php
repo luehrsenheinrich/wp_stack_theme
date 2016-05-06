@@ -35,7 +35,7 @@ class lh_custom_posttypes {
 
 		register_taxonomy(
 			'stacks',
-			'stack_item',
+			'stack-item',
 			array(
 				'labels' => $labels,
 				'hierarchical'      => true,
@@ -79,7 +79,7 @@ class lh_custom_posttypes {
 			'taxonomies'		 => array( 'stack' ),
 		);
 
-		register_post_type( 'stack_item', $args );
+		register_post_type( 'stack-item', $args );
 
 	}
 
