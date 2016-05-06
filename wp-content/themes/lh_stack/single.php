@@ -29,9 +29,9 @@ $has_url = $url != null;
 		<div class="row">
 			<div class="col-xs-12 col-md-8 col-md-offset-2">
 				<div class="the_headline">
-					<?php echo $has_url ? '<a href="' . $url . '" alt="' . get_the_title() . '" title="' . get_the_title() . '">' : null; ?>
-					<h1><?php the_title(); ?></h1>
-					<?php echo $has_url ? '</a>' : null; ?>
+					<?php echo $has_url ? '<h1><a href="' . $url . '" alt="' . get_the_title() . '" title="' . get_the_title() . '">' : null; ?>
+					<?php the_title(); ?>
+					<?php echo $has_url ? '</a></h1>' : null; ?>
 				</div>
 				<div class="the_content">
 					<?php the_content(); ?>
