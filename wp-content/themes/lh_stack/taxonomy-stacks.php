@@ -6,12 +6,13 @@
     'parent'		=> $this_term->term_id,
 	) );
 	
-get_header(); ?>
+get_header(); 
+?>
 
 <div class="container content-container">
 	<div class="row">
 		<div class="col-xs-12">
-			<h1>Taxonomy Name here</h1>
+			<h1><?php echo $this_term->name; ?></h1>
 			<?php
 				get_template_part("loops/loop", "stacks");
 			?>
