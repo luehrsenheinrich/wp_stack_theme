@@ -151,6 +151,6 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask( 'handle_js', ['concat_in_order', 'uglify'] );
-
+  grunt.registerTask( 'handle_less', ['less', 'postcss'] );
 };
 

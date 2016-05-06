@@ -28,3 +28,20 @@ body, html {
 	padding: (@line-height-target-xs*2)+3px 0 @line-height-target-xs*2 0;
 	flex: 1;
 }
+
+.the_button {
+	text-align: center;
+
+	.btn.stack {
+		display: block;
+		padding: (@line-height-target-xs * 0.5) (@line-height-target-xs);
+		background-color: @brandColor;
+		color: #fff;
+		border-radius: 8px;
+		transition: all 0.2s;
+
+		&:hover {
+			background-color: @brandAccent;
+		}
+	}
+}
