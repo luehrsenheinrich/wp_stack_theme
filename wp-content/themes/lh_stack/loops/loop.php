@@ -15,7 +15,10 @@
 						<a href="<?php echo $stack_info['url']; ?>">
 							<?php
 							the_post_thumbnail();
-						?>
+							?>
+							<div class="thumb-hover">
+								<i class="fa fa-external-link" aria-hidden="true"></i>
+							</div>
 						</a>
 					</figure>
 					<?php
