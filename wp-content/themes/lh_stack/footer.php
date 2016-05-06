@@ -27,8 +27,8 @@
 				<div class="col-xs-12">
 					<div class="footer-logo">
 						<p>GameDev Stack is a project by</p>
-						<a href="<?php echo get_option('footer_logo_link'); ?>" title="<?php echo get_option('footer_logo_link'); ?>" alt="<?php echo get_option('footer_logo_link'); ?>" class="logo">
-							<img src="<?php echo get_option('footer_logo'); ?>" title="<?php echo get_option('footer_logo_link'); ?>" alt="<?php echo get_option('footer_logo_link'); ?>">
+						<a href="<?php echo get_option('footer_link'); ?>" title="<?php echo get_option('footer_link_text'); ?>" alt="<?php echo get_option('footer_link_text'); ?>" class="logo">
+							<img src="<?php echo get_option('footer_logo'); ?>" title="<?php echo get_option('footer_link_text'); ?>" alt="<?php echo get_option('footer_link_text'); ?>">
 						</a>
 					</div>
 				</div>
