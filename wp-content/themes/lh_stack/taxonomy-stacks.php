@@ -1,4 +1,11 @@
 <?php
+	$this_term = get_queried_object();
+	$loop_terms = get_terms( array(
+    'taxonomy' 		=> 'stacks',
+    'hide_empty' 	=> false,
+    'parent'		=> $this_term->term_id,
+	) );
+	
 get_header(); ?>
 
 <div class="container content-container">

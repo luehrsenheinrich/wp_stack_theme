@@ -15,6 +15,20 @@
 			?>
 		</div>
 		<div class="col-md-3 col-md-offset-1 hidden-xs hidden-sm">
-			menu here
+			<?php
+                /*
+                 * Call the main menu
+                 */
+
+                $args = array(
+                        "theme_location"    => "main-menu",
+                        'menu_class'        => 'menu clearfix',
+                        'container'         => 'nav',
+                        'fallback_cb'       => false,
+                        'depth'             => 1
+
+                );
+                wp_nav_menu($args);
+            ?>
 		</div>
 	</div>

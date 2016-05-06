@@ -72,7 +72,7 @@ add_action("init", "lh_theme_image");
  */
 function lh_register_menus(){
 	register_nav_menus( array(
-		'main menu' 	=> __("Main Menu", "gds"),
+		'main-menu' 	=> __("Main Menu", "gds"),
 		'footer-menu' 	=> __("Footer Menu", "gds"),
 	) );
 }

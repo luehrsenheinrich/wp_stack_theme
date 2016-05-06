@@ -1,6 +1,12 @@
+<?php
+	global $loop_terms;
+	
+	if(is_array($loop_terms) && count($loop_terms) > 0):
+	
+	?>
 <div class="stacks-container">
 	<?php
-		global $loop_terms;
+		
 		
 		foreach($loop_terms as $t){
 			echo '
@@ -17,3 +23,7 @@
 		}	
 	?>
 </div>
+
+<?php
+	endif;
+?>
