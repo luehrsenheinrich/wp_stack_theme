@@ -9,7 +9,7 @@
 	<?php
 		foreach($loop_terms as $t){
 			?>
-			<div class="col-xs-4">
+			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
 				<div class="stack-item">
 					<a href="<?php echo get_term_link($t->term_id, 'stacks') ?>" title="<?php echo esc_attr($t->name); ?>">
 						<span>
