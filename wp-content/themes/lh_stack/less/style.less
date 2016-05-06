@@ -9,6 +9,10 @@ Version: 1.0
 
 // Main LESS File
 @import (less) "../bower_components/normalize.css/normalize.css";
+@import "../bower_components/font-awesome/less/font-awesome.less";
+// Correction for the correct fa path
+@fa-font-path: "font";
+
 @import "lh_variables";
 @import "mixins/mixins";
 @import "colors";
@@ -24,11 +28,14 @@ Version: 1.0
 @import "wp-media";
 @import "main";
 @import "single";
+@import "forms";
 
 // Template Less Files
 @import "header";
 @import "footer";
 @import "loop-stacks";
+@import "loop";
+@import "taxonomy";
 
 // Responsive
 @import "sm/sm";

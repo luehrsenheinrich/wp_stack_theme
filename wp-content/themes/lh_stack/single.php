@@ -38,8 +38,11 @@ $has_url = $url != null;
 				</div>
 
 				<?php 
-				if($has_url)
+				if($has_url) {
+					echo '<div class="the_button">';
 					echo '<a href="' . $url . '" alt="' . get_the_title() . '" title="' . get_the_title() . '" class="btn stack">' . get_the_title() . '</a>';
+					echo '</div>';
+				}
 				?>
 			</div>
 		</div>

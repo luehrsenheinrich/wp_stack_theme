@@ -71,9 +71,49 @@ class lhThemeCustomizer {
 				$wp_customize,
 				'footer_logo',
 				array(
-		        	'label'      	=> __("Footer Logo", LANG_NAMESPACE),
+		        	'label'      	=> __("Footer Logo Image", LANG_NAMESPACE),
 			        'section'    	=> 'lh_footer',
 			        'settings'   	=> 'footer_logo',
+			    )
+			)
+	    );
+
+		// The Link Logo Setting
+		$wp_customize->add_setting("footer_link", array(
+			'default'        => '',
+			'capability'     => 'edit_theme_options',
+			'type'           => 'option',
+		));
+
+		$wp_customize->add_control(
+				new WP_Customize_Control(
+				$wp_customize,
+				'footer_link',
+				array(
+		        	'label'      	=> __("Footer Logo Link", LANG_NAMESPACE),
+			        'section'    	=> 'lh_footer',
+			        'settings'   	=> 'footer_link',
+			        'type'			=> 'url'
+			    )
+			)
+	    );
+
+		// The Link Logo Setting
+		$wp_customize->add_setting("footer_link_text", array(
+			'default'        => '',
+			'capability'     => 'edit_theme_options',
+			'type'           => 'option',
+		));
+
+		$wp_customize->add_control(
+				new WP_Customize_Control(
+				$wp_customize,
+				'footer_link_text',
+				array(
+		        	'label'      	=> __("Footer Logo Text", LANG_NAMESPACE),
+			        'section'    	=> 'lh_footer',
+			        'settings'   	=> 'footer_link_text',
+			        'type'			=> 'text'
 			    )
 			)
 	    );
@@ -82,7 +122,7 @@ class lhThemeCustomizer {
 	 * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
 	 */
 	public function customize_preview_js() {
-		wp_enqueue_script( 'customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '1', true );
+		//wp_enqueue_script( 'customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '1', true );
 	}
 }
 $lh_Theme_Customizer = new lhThemeCustomizer();

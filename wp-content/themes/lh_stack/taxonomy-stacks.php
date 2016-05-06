@@ -12,13 +12,17 @@ get_header();
 <div class="container content-container">
 	<div class="row">
 		<div class="col-xs-12">
-			<h1><?php echo $this_term->name; ?></h1>
+			<h1 class="tax-title"><?php echo $this_term->name; ?></h1>
+			<div class="child-stacks clearfix">
 			<?php
 				get_template_part("loops/loop", "stacks");
 			?>
+			</div>
+			<div class="stack-items clearfix">
 			<?php
 				get_template_part("loops/loop");
 			?>
+			</div>
 		</div>
 	</div>
 </div>
