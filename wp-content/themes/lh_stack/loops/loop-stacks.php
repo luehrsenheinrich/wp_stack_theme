@@ -11,7 +11,9 @@
 			<div class="col-xs-4">
 				<div class="stack-item">
 					<a href="#" title="">
-					'.$t->name.'
+						<span>
+							'.$t->name.'
+						</span>
 					</a>
 				</div>
 			</div>

@@ -1,7 +1,22 @@
-.stacks-container {
-	.stack-item {
-		border-radius: 10px;
+.stack-item {
+	height: @line-height-target-xs*6;
+	margin-bottom: 30px;
+	a {
+		display: block;
+		width: 100%;
+		height: 100%;
 		background-color: @brandColor;
-		padding: @line-height-target-xs*2 0;
+		border-radius: 10px;
+		color: #fff;
+		text-align: center;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		transition: background-color linear 0.1s;
+		
+		&:hover {
+			background-color: @brandAccent;
+			transition: background-color linear 0.1s;
+		}
 	}
 }
