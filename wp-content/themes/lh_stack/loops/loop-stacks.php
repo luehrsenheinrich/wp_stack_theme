@@ -4,10 +4,8 @@
 	if(is_array($loop_terms) && count($loop_terms) > 0):
 	
 	?>
-<div class="stacks-container">
+<div class="stacks-container clearfix">
 	<?php
-		
-		
 		foreach($loop_terms as $t){
 			echo '
 			<div class="col-xs-4">
