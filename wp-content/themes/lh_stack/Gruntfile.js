@@ -31,7 +31,7 @@ module.exports = function(grunt) {
 
 	postcss: {
 		options: {
-			map: true, // inline sourcemaps
+			map: false, // inline sourcemaps
 
 			processors: [
 				require('autoprefixer')({browsers: 'last 2 versions'}), // add vendor prefixes
@@ -40,8 +40,8 @@ module.exports = function(grunt) {
 		},
 		dist: {
 			files: {
-				"style.css": "less/style.less", // destination file and source file
-				"editor-style.css": "less/editor-style.less"
+				"style.css": "style.css", // destination file and source file
+				"editor-style.css": "editor-style.css"
 			}
 		}
 	},
