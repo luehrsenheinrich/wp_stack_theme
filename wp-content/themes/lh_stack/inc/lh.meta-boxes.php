@@ -31,6 +31,14 @@ function lh_add_post_meta_boxes() {
 	$page_template = get_post_meta( $post->ID, '_wp_page_template', true );
 	$post_format = get_post_format( $post->ID );
 	// Define the post types, in which this meta box shall appear
+	
+	add_meta_box(
+		'stack_url',
+		__('Award', "mimimi"),
+		'stack_url',
+		'stack-item',
+		'side'
+	);
 
 }
 
@@ -38,7 +46,25 @@ function lh_add_post_meta_boxes() {
 /// BOXES   ====================================
 ///
 
+function stack_url( $object, $box ) {
+	$stack_info = (array) get_post_meta($object->ID, '_stack_info', true);
+	$stack_info_default = array(
+		"url"	=> isset($stack_info['url']) ? $stack_info['url'] : NULL
+	);
 
+	wp_nonce_field( basename( __FILE__ ), 'lh_data_nonce' );
+
+	?>
+
+	<p>
+		<strong><?php _e('Stack URL', LANG_NAMESPACE); ?></strong>
+	</p>
+	<p>
+		<input type="text" class="widefat" id="stack-url" name="stackinfo[url]" value="<?php echo $stack_info_default["url"]; ?>">
+	</p>
+
+	<?php
+}
 
 
 ///
@@ -58,6 +84,7 @@ function lh_box_save( $post_id, $post ) {
 	/*
 	 * lh_save_post_meta($post_id, $post, 'lh_data_nonce', 'post_value_name', '_meta_value_name');
 	 */
+	lh_save_post_meta($post_id, $post, 'lh_data_nonce', 'stackinfo', '_stack_info');
 }
 
 /**
