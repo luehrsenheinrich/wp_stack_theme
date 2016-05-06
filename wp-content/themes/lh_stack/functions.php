@@ -59,7 +59,7 @@ add_action('after_setup_theme', 'lh_load_theme_textdomain');
 
 function lh_theme_image(){
 	add_theme_support( 'post-thumbnails' );
-	set_post_thumbnail_size( 1920, 1080, true );
+	set_post_thumbnail_size( 300, 200, true );
 
 }
 add_action("init", "lh_theme_image");
