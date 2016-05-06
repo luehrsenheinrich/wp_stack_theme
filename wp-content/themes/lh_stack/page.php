@@ -20,7 +20,7 @@ get_header();
 		<div class="row">
 			<div class="col-xs-12 col-md-8 col-md-offset-2">
 				<div class="the_headline">
-					<h2><?php the_title(); ?></h2>
+					<h1><?php the_title(); ?></h1>
 				</div>
 				<div class="the_content">
 					<?php the_content(); ?>
