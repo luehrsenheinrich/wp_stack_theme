@@ -1,7 +1,7 @@
 <div class="row">
 	<section class="col-xs-8">
 		<?php
-			while ( have_posts() ) : the_post(); 
+			if( have_posts() ): while ( have_posts() ) : the_post(); 
 			
 			$url = ($stack_info['url'] == "" || $stack_info['url'] == null || $stack_info['url'] === 0) ? NULL : $stack_info['url'];
 			$has_url = $url != null;
@@ -34,7 +34,17 @@
 					</summary>
 				</article>
 		<?php
-			endwhile;
+			endwhile; else: 
+		?>
+			<article  class="item-container clearfix">
+				<summary class="item-content">
+						<h3 class="item-title">
+							<?php _e("No links in this category yet!", LANG_NAMESPACE); ?>
+						</h3>
+				</summary>
+			</article>
+		<?php
+			endif;	
 		?>
 	</section>
 	<aside class="col-md-3 col-md-offset-1 hidden-xs hidden-sm">

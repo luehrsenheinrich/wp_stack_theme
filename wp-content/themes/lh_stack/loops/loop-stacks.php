@@ -5,21 +5,23 @@
 	
 	?>
 <div class="stacks-container clearfix">
+	<div class="row">
 	<?php
 		foreach($loop_terms as $t){
-			echo '
+			?>
 			<div class="col-xs-4">
 				<div class="stack-item">
-					<a href="'.get_term_link($t->term_id, 'stacks').'" title="">
+					<a href="<?php echo get_term_link($t->term_id, 'stacks') ?>" title="<?php echo esc_attr($t->name); ?>">
 						<span>
-							'.$t->name.'
+							<?php echo esc_attr($t->name); ?>
 						</span>
 					</a>
 				</div>
 			</div>
-			';
+		<?php
 		}	
 	?>
+	</div>
 </div>
 
 <?php

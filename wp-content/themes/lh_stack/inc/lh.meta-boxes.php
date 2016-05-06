@@ -31,10 +31,10 @@ function lh_add_post_meta_boxes() {
 	$page_template = get_post_meta( $post->ID, '_wp_page_template', true );
 	$post_format = get_post_format( $post->ID );
 	// Define the post types, in which this meta box shall appear
-	
+
 	add_meta_box(
 		'stack_url',
-		__('Award', "mimimi"),
+		__('Stack Info', LANG_NAMESPACE),
 		'stack_url',
 		'stack-item',
 		'side'
