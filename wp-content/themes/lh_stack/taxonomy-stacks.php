@@ -18,6 +18,14 @@ get_header();
 				get_template_part("loops/loop", "stacks");
 			?>
 			</div>
+			<?php if(!is_home()): ?>
+			<div class="row">
+				<div class="col-xs-12">
+				<?php if ( function_exists('yoast_breadcrumb') ) 
+					{yoast_breadcrumb('<p id="breadcrumbs">','</p>');} ?>
+				</div>
+			</div>
+			<?php endif; ?>
 			<div class="stack-items clearfix">
 			<?php
 				get_template_part("loops/loop");
