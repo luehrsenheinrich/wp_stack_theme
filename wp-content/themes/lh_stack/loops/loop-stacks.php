@@ -1,16 +1,12 @@
-<?php
-	$terms = get_terms( array(
-	    'taxonomy' => 'stacks',
-	    'hide_empty' => false,
-	) );
-?>
 <div class="stacks-container">
 	<?php
-		foreach($terms as $t){
+		global $loop_terms;
+		
+		foreach($loop_terms as $t){
 			echo '
 			<div class="col-xs-4">
 				<div class="stack-item">
-					<a href="#" title="">
+					<a href="'.get_term_link($t->term_id, 'stacks').'" title="">
 						<span>
 							'.$t->name.'
 						</span>

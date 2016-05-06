@@ -1,5 +1,12 @@
 <?php
-get_header(); ?>
+get_header();
+
+$loop_terms = get_terms( array(
+    'taxonomy' 		=> 'stacks',
+    'hide_empty' 	=> false,
+    'parent'		=> 0
+) );
+?>
 
 <div class="container content-container">
 	<div class="row">
