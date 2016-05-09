@@ -17,7 +17,7 @@ $has_url = $url != null;
 			<div class="col-xs-12">
 				<div class="the_thumbnail">
 					<?php
-						echo $has_url ? '<a href="' . $url . '" alt="' . get_the_title() . '" title="' . get_the_title() . '">' : null;
+						echo $has_url ? '<a href="' . $url . '" alt="' . get_the_title() . '" title="' . get_the_title() . '" target="_blank">' : null;
 						the_post_thumbnail('teaser_big');
 						echo $has_url ? '</a>' : null;
 					?>
@@ -29,7 +29,7 @@ $has_url = $url != null;
 		<div class="row">
 			<div class="col-xs-12 col-md-8 col-md-offset-2">
 				<div class="the_headline">
-					<?php echo $has_url ? '<h1><a href="' . $url . '" alt="' . get_the_title() . '" title="' . get_the_title() . '">' : null; ?>
+					<?php echo $has_url ? '<h1><a href="' . $url . '" alt="' . get_the_title() . '" title="' . get_the_title() . '" target="_blank">' : null; ?>
 					<?php the_title(); ?>
 					<?php echo $has_url ? '</a></h1>' : null; ?>
 				</div>
@@ -40,7 +40,7 @@ $has_url = $url != null;
 				<?php 
 				if($has_url) {
 					echo '<div class="the_button">';
-					echo '<a href="' . $url . '" alt="' . get_the_title() . '" title="' . get_the_title() . '" class="btn stack">' . get_the_title() . '</a>';
+					echo '<a href="' . $url . '" alt="' . get_the_title() . '" title="' . get_the_title() . '" class="btn stack" target="_blank">' . get_the_title() . '</a>';
 					echo '</div>';
 				}
 				?>
