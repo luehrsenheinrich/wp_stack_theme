@@ -12,7 +12,7 @@
 						if(has_post_thumbnail()):
 					?>
 					<figure class="item-thumb">
-						<a href="<?php echo $stack_info['url']; ?>">
+						<a href="<?php echo $stack_info['url']; ?>" target="_blank">
 							<?php
 							the_post_thumbnail();
 							?>
@@ -26,7 +26,7 @@
 					?>
 					<summary class="item-content">
 						<h3 class="item-title">
-							<a href="<?php echo $stack_info['url']; ?>"><?php the_title(); ?></a>
+							<a href="<?php echo $stack_info['url']; ?>" target="_blank"><?php the_title(); ?></a>
 						</h3>
 						<div class="the_excerpt">
 							<?php the_excerpt(); ?>
